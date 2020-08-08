@@ -1,0 +1,16 @@
+{% extends '@base/home.html.twig' %}
+{% block title %}404 Page not found{% endblock %}
+{% block header %}
+    {% set tagline ='404 Not found' %}
+    {% set tagline_content = 'Oops.. Pages not found' %}
+    {% set tagline_btn_content = 'Back to home' %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <div class="text-center mb-5">
+        <img
+            src="{{ asset('images/images.jpg') }}"
+            class="img-thumbnail"
+            >
+    </div>
+{% endblock %}

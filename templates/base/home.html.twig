@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+{% block title %}Welcome to homepages{% endblock %}
+{% block navbar %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <button
+                class="navbar-brand navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarResponsive"
+                aria-controls="#navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+
+                <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-grid"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+
+                    <path
+                        fill-rule="evenodd"
+                        d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"
+                        />
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ path('homepage') }}">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hidden service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Radio stream</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Article</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+{% set tagline = 'Welcome' %}
+{% set tagline_btn_content = 'Reload' %}
+{% block header %}
+    <header class="bg-aesthetic-gradient py-5 mb-5">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 text-white mt-5 mb-2">{{ tagline }}</h1>
+                    <p class="lead mb-5 text-white">{{ tagline_content }}</p>
+                    <a href="{{ path('homepage') }}">
+                        <button
+                            type="button"
+                            class="btn btn-outline-light btn-lg">
+                            {{ tagline_btn_content }}
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+{% block content %}
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8 mb-5">
+                <h2>Vaporwave 101</h2>
+                <hr/>
+                <p>vaporwave is a microgenre of electronic music, a visual art style, and an Internet meme that emerged in the early 2010s. ... Visually, it incorporates early Internet imagery, late 1990s web design, glitch art, anime, 3D-rendered objects, and cyberpunk tropes in its cover artwork and music videos.</p>
+                <a class="btn btn-outline-dark btn-lg" href="#">Find Out more &raquo;</a>
+            </div>
+            <div class="col-md-4 mb-5">
+                <h2>Contact Me</h2>
+                <hr>
+                <address>
+                    <strong>Cvar1984</strong>
+                    <br>3481 Melrose Place
+                    <br>Beverly Hills, CA 90210
+                    <br>
+                </address>
+                <address>
+                    <abbr title="Phone">P:</abbr>
+                    (123) 456-7890
+                    <br>
+                    <abbr title="Email">E:</abbr>
+                    <a href="mailto:#">gedzsarjuncomuniti@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <img
+                        class="card-img-top"
+                        src="{{ asset('images/machintos_plus.jpg') }}"
+                        alt=""
+                        />
+                    <div class="card-body">
+                        <h4 class="card-title">Machontos plus</h4>
+                        <p class="card-text">Ramona Andra Xavier (born August 19, 1992, known by her primary alias Vektroid) is an American electronic musician from Portland, Oregon.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-dark">Find Out More &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="{{ asset('images/blank_banshee.jpg') }}">
+                    <div class="card-body">
+                        <h4 class="card-title">Blank banshee</h4>
+                        <p class="card-text">Blank Banshee is the project of producer Patrick Driscoll from Vancouver, British Columbia, Canada. Originally from Saint John, New Brunswick, Canada, he was also a member of the band Shinjuku Mad.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-dark">Find Out More &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="{{ asset('images/saint_pepsi.jpg') }}">
+                    <div class="card-body">
+                        <h4 class="card-title">Saint pepsi</h4>
+                        <p class="card-text">Saint Pepsi is a music project from United States created by Ryan DeRobertis, an electronic music producer from Long Island who makes vaporwave music, lo-fi beats and house. In 2015 he changed the project's name to Skylar Spence.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-dark">Find Out More &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+{% endblock %}
+{% block footer %}
+<!-- Footer -->
+<footer class="footer mt-auto py-3 bg-dark sticky-bottom">
+    <div class="container-fluid">
+        <p class="m-0 text-center text-muted">
+            Copyright &copy; Nightwave Plaza 2020
+        </p>
+    </div>
+    <!-- /.container -->
+</footer>
+{% endblock %}

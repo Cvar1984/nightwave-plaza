@@ -1,0 +1,8 @@
+{
+  "build/bootstrap.css": "/build/bootstrap.css",
+  "build/bootstrap.js": "/build/bootstrap.js",
+  "build/custom.css": "/build/custom.css",
+  "build/custom.js": "/build/custom.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors~bootstrap.js": "/build/vendors~bootstrap.js"
+}

@@ -1,0 +1,23 @@
+{
+  "entrypoints": {
+    "bootstrap": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~bootstrap.js",
+        "/build/bootstrap.js"
+      ],
+      "css": [
+        "/build/bootstrap.css"
+      ]
+    },
+    "custom": {
+      "js": [
+        "/build/runtime.js",
+        "/build/custom.js"
+      ],
+      "css": [
+        "/build/custom.css"
+      ]
+    }
+  }
+}
