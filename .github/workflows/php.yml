@@ -30,8 +30,11 @@ jobs:
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
+    - name: lint yaml
+      run: bin/console lint:yaml
 
-    # - name: Run test suite
-    #   run: composer run-script test
+    - name: lint twig
+      run: bin/console lint:twig
+
+    - name: lint container
+      run: bin/console lint:container
