@@ -31,10 +31,13 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: lint yaml
-      run: bin/console lint:yaml
+      run: bin/console lint:yaml config/ -v
 
     - name: lint twig
-      run: bin/console lint:twig
+      run: bin/console lint:twig templates/ -v
 
     - name: lint container
       run: bin/console lint:container
+
+    - name: validate schema
+      run: bin/console doctrine:schema:validate
