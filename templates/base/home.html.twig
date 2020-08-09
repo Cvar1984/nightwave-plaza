@@ -53,12 +53,12 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-lg-12">
-                    <h1 class="display-4 text-white mt-5 mb-2">{{ tagline }}</h1>
-                    <p class="lead mb-5 text-white">{{ tagline_content }}</p>
+                    <h1 class="display-4 text-white simple mt-5 mb-2">{{ tagline }}</h1>
+                    <p class="lead mb-5 text-white simple">{{ tagline_content }}</p>
                     <a href="{{ path('homepage') }}">
                         <button
                             type="button"
-                            class="btn btn-outline-light btn-lg">
+                            class="btn btn-outline-light simple btn-lg">
                             {{ tagline_btn_content }}
                         </button>
                     </a>
@@ -71,13 +71,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mb-5">
-                <h2>Vaporwave 101</h2>
+                <h2>{{ abouts[0].title }}</h2>
                 <hr/>
                 <p>{{ abouts[0].content }}</p>
                 <a
                     class="btn btn-outline-dark btn-lg"
                     href="#"
-                    >Find Out more &raquo;
+                    >Find out more &raquo;
                 </a>
             </div>
             <div class="col-md-4 mb-5">
@@ -88,12 +88,8 @@
                     {{ abouts[0].authorAddress }}
                 </address>
                 <address>
-                    <abbr title="Phone">P:</abbr>
-                    {{ abouts[0].authorPhone }}<br />
-                    <abbr title="Email">E:</abbr>
-                    <a href="mailto:{{ abouts[0].authorEmail }}">
-                        {{ abouts[0].authorEmail }}
-                    </a>
+                    <abbr title="Phone">P:&nbsp;</abbr>+{{ abouts[0].authorPhone }}<br />
+                    <abbr title="Email">E:&nbsp;</abbr><a href="mailto:{{ abouts[0].authorEmail }}">{{ abouts[0].authorEmail }}</a>
                 </address>
             </div>
         </div><!-- /.row -->
@@ -116,7 +112,7 @@
                         <a
                             href="#"
                             class="btn btn-outline-dark"
-                            >Find Out More &raquo;
+                            >Find out more &raquo;
                         </a>
                     </div>
                 </div>

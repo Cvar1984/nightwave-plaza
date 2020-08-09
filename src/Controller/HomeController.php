@@ -21,7 +21,7 @@ class HomeController extends AbstractController
         $abouts = $aboutRepo->findAll();
 
         return $this->render('base/home.html.twig', [
-            'tagline' => 'Welcome',
+            'tagline' => 'Nightwave Plaza',
             'tagline_btn_content' => 'Reload',
             'tagline_content' => Fortune::make(),
             'producers' => $producers,
