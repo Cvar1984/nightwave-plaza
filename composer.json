@@ -5,6 +5,7 @@
     "php": "^7.2.5",
     "ext-ctype": "*",
     "ext-iconv": "*",
+    "ext-pdo_sqlite": "*",
     "composer/package-versions-deprecated": "^1.10",
     "doctrine/doctrine-bundle": "^2.1",
     "doctrine/doctrine-migrations-bundle": "^3.0",
