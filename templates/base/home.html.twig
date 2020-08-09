@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block title %}Welcome to homepages{% endblock %}
-{% block navbar %}
-    <!-- Navigation -->
+{% block navbar %}<!-- Navigation -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <button
@@ -49,8 +48,6 @@
         </div>
     </nav>
 {% endblock %}
-{% set tagline = 'Welcome' %}
-{% set tagline_btn_content = 'Reload' %}
 {% block header %}
     <header class="bg-aesthetic-gradient py-5 mb-5">
         <div class="container h-100">
@@ -70,86 +67,65 @@
         </div>
     </header>
 {% endblock %}
-{% block content %}
-    <!-- Page Content -->
+{% block content %}<!-- Page Content -->
     <div class="container">
-
         <div class="row">
             <div class="col-md-8 mb-5">
                 <h2>Vaporwave 101</h2>
                 <hr/>
-                <p>vaporwave is a microgenre of electronic music, a visual art style, and an Internet meme that emerged in the early 2010s. ... Visually, it incorporates early Internet imagery, late 1990s web design, glitch art, anime, 3D-rendered objects, and cyberpunk tropes in its cover artwork and music videos.</p>
-                <a class="btn btn-outline-dark btn-lg" href="#">Find Out more &raquo;</a>
+                <p>{{ abouts[0].content }}</p>
+                <a
+                    class="btn btn-outline-dark btn-lg"
+                    href="#"
+                    >Find Out more &raquo;
+                </a>
             </div>
             <div class="col-md-4 mb-5">
                 <h2>Contact Me</h2>
                 <hr>
                 <address>
-                    <strong>Cvar1984</strong>
-                    <br>3481 Melrose Place
-                    <br>Beverly Hills, CA 90210
-                    <br>
+                    <strong>{{ abouts[0].authorName }}</strong><br />
+                    {{ abouts[0].authorAddress }}
                 </address>
                 <address>
                     <abbr title="Phone">P:</abbr>
-                    (123) 456-7890
-                    <br>
+                    {{ abouts[0].authorPhone }}<br />
                     <abbr title="Email">E:</abbr>
-                    <a href="mailto:#">gedzsarjuncomuniti@gmail.com</a>
+                    <a href="mailto:{{ abouts[0].authorEmail }}">
+                        {{ abouts[0].authorEmail }}
+                    </a>
                 </address>
             </div>
-        </div>
-        <!-- /.row -->
-
+        </div><!-- /.row -->
         <div class="row">
+            {% for producer in producers %} <!-- start producer -->
             <div class="col-md-4 mb-5">
                 <div class="card h-100">
                     <img
                         class="card-img-top"
-                        src="{{ asset('images/machintos_plus.jpg') }}"
-                        alt=""
+                        src="{{ asset(producer.profilePicture) }}"
+                        alt="Producer"
                         />
                     <div class="card-body">
-                        <h4 class="card-title">Machontos plus</h4>
-                        <p class="card-text">Ramona Andra Xavier (born August 19, 1992, known by her primary alias Vektroid) is an American electronic musician from Portland, Oregon.</p>
+                        <h4 class="card-title">
+                            {{ producer.username|capitalize }}
+                        </h4>
+                        <p class="card-text">{{ producer.bio }}</p>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-outline-dark">Find Out More &raquo;</a>
+                        <a
+                            href="#"
+                            class="btn btn-outline-dark"
+                            >Find Out More &raquo;
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="{{ asset('images/blank_banshee.jpg') }}">
-                    <div class="card-body">
-                        <h4 class="card-title">Blank banshee</h4>
-                        <p class="card-text">Blank Banshee is the project of producer Patrick Driscoll from Vancouver, British Columbia, Canada. Originally from Saint John, New Brunswick, Canada, he was also a member of the band Shinjuku Mad.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-outline-dark">Find Out More &raquo;</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="{{ asset('images/saint_pepsi.jpg') }}">
-                    <div class="card-body">
-                        <h4 class="card-title">Saint pepsi</h4>
-                        <p class="card-text">Saint Pepsi is a music project from United States created by Ryan DeRobertis, an electronic music producer from Long Island who makes vaporwave music, lo-fi beats and house. In 2015 he changed the project's name to Skylar Spence.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-outline-dark">Find Out More &raquo;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
+            {% endfor %}<!-- end producer -->
+       </div><!-- /.row -->
+    </div><!-- /.container -->
 {% endblock %}
-{% block footer %}
-<!-- Footer -->
+{% block footer %}<!-- Footer -->
 <footer class="footer mt-auto py-3 bg-dark sticky-bottom">
     <div class="container-fluid">
         <p class="m-0 text-center text-muted">
