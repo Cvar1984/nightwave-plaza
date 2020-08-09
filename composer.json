@@ -1,4 +1,13 @@
 {
+  "name": "cvar1984/nightwave-plaza",
+  "description": "online music stream",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Cvar1984",
+      "role": "developer"
+    }
+  ],
   "type": "project",
   "license": "proprietary",
   "require": {
